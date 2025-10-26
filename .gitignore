@@ -1,0 +1,11 @@
+bayesian_personal_environment/
+.venv/
+.env/
+__pycache__/
+*.dll
+*.pyd
+*.so
+*.pyc
+.ipynb_checkpoints/
+
+bayesian_personal_environment/path_shortener.sh
