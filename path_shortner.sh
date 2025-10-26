@@ -1,1 +1,0 @@
-function prompt { "$(Get-Location | Split-Path -Parent | Split-Path -Leaf)\$(Split-Path -Leaf (Get-Location))> " }
