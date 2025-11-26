@@ -9,4 +9,4 @@ __pycache__/
 .ipynb_checkpoints/
 
 bayesian_personal_environment/path_shortener.sh
-datasets/ccdi_clinical_participants.csv
+datasets/
