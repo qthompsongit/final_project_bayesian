@@ -5,19 +5,24 @@ Date: December 2025
 
 ### 🧠 Why Pediatric CNS Tumors Matter
 
-Pediatric Central Nervous System (CNS) tumors are among the most clinically significant cancers in children. 
+Pediatric Central Nervous System (CNS) tumors represent a critical area of oncological research due to their high prevalence and mortality rates in children. 
 
-Based on the review by **Damodharan & Puccetti (2024)**, three key factors underscore their importance:
+According to a recent review by **Damodharan & Puccetti (2024)**, the clinical urgency is underscored by three key facts:
 
-* **Most common solid tumors in children**
+* **Most Common Solid Neoplasm**
     > *"CNS tumors are the most common solid neoplasm seen in children."*
-* **Leading cause of cancer-related death**
+* **Leading Cause of Cancer-Related Death**
     > *"They are the leading cause of death from cancer in this group."*
-* **High incidence (~20% of all childhood cancers)**
-    > *"CNS tumors account for approximately 20% of childhood cancers, second only to leukemia."*
+* **High Incidence (~20%)**
+    > *"CNS tumors account for approximately 20% of childhood cancers, second only to leukemia in overall frequency."*
 
-These characteristics highlight the **clinical urgency** of studying pediatric CNS tumors and motivate the development of models that better characterize risk factors, treatment effects, and early mortality patterns in this vulnerable population.
+#### 📉 The Challenge: Data Scarcity & Research Gaps
+Despite their clinical importance, pediatric CNS tumors remain under-researched compared to adult cancers. 
+* **Data Scarcity:** As a rare disease, sample sizes for pediatric tumors are inherently small and fragmented across different institutions.
+* **Limited Analysis:** The lack of large-scale, centralized datasets has historically hindered the application of advanced machine learning models, leaving many risk factors and treatment outcomes underexplored.
 
+**Why This Project Matters:**
+This scarcity of data necessitates robust statistical approaches. Our **Bayesian Hierarchical Logistic Model** is specifically designed to handle these limitations—extracting meaningful signals from limited data while quantifying the high uncertainty inherent in pediatric oncology.
 
 🎯 2. Project Overview
 
