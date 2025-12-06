@@ -49,27 +49,24 @@ We build a landmark-style survival endpoint:
 0 → survival ≥ 730 days
 censored before 2 years → excluded
 
-**REASON: NEED TO ADD
-**
-
-Our approach combines:
-
-Horseshoe Priors for sparse feature selection,
-Hierarchical structure for multi-study differences
+Why 2 years?: 2-year OS is a commonly used endpoint in pediatric CNS oncology, and given our sample’s survival distribution (median ≈ 501 days, mean ≈ 872 days), it provides a clinically meaningful separation between early mortality and longer-term survivors.
 
 Feature Engineering
 
-One-hot encoded treatments
-Standardized age at diagnosis
-Race & sex expanded into indicator variables
+One-hot encoding of treatment types and sex
+Multi-hot atomic encoding of race categories
+Age at first diagnosis computed and median-imputed with a missingness indicator
+Survival time constructed from age at diagnosis → age at last contact
+Removal of rows with missing survival time prior to endpoint creation
+Standardization of continuous predictors
+Dropping identifiers (Participant ID, Study ID) prior to modeling
+
 
 Final Dataset
 
-~800 pediatric CNS tumor cases
+~800 (need to update) pediatric CNS tumor cases/patients
+Outcome imbalance ~117:700 (death:survival) (need to update)
 
-Outcome imbalance ~1:6 (death:survival)
-
-Four independent studies represented
 
 ### 4. Bayesian Modeling Methodology
 Model Type
@@ -77,56 +74,17 @@ Model Type
 Bayesian Hierarchical Logistic Regression with Horseshoe Priors
 
 Likelihood
-y_i ~ Bernoulli(p_i)
-logit(p_i) = α_study[i] + X_i β
 
-Hierarchical Random Intercepts
-
-Non-centered parameterization is used to stabilize sampling:
-
-z_j ~ Normal(0, 1)
-α_j = μ_α + σ_α * z_j
-
-Horseshoe Prior for Sparse Feature Selection
-β_k ~ Normal(0, τ * λ_k)
-τ  ~ HalfCauchy(1)
-λ_k ~ HalfCauchy(1)
-
-
-This shrinks irrelevant predictors toward zero and highlights clinically meaningful ones.
-
-🛠️ 5. PyMC Implementation (Core Block)
-with pm.Model(coords=coords) as hierarchical_model:
+### 5. PyMC Implementation (Core Block)
 
 ** NEED TO ADD
 **
 
 ### 6. Results
-1. Feature Effects
-
-2. Study-Level Differences
-
-
-3. Model Diagnostics
-
-Using:
-
 
 
 ### 7. Conclusion
 
-This project demonstrates how Bayesian Hierarchical Logistic Regression can:
-
-capture multi-study heterogeneity,
-
-identify meaningful predictors using Horseshoe priors,
-
-quantify uncertainty for clinical interpretation,
-
-support the development of robust pediatric oncology risk models.
-
-The methodology is extendable to other outcomes such as progression-free survival, recurrence, or treatment-specific response modeling.
-
-📬 8. Contact
+### 8. Contact
 
 For questions or further exploration, please open an issue in this repository or contact the project team.
