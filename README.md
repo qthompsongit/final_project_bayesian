@@ -63,8 +63,6 @@ One-hot encoded treatments
 Standardized age at diagnosis
 Race & sex expanded into indicator variables
 
-Study ID used as grouping variable in the hierarchical model
-
 Final Dataset
 
 ~800 pediatric CNS tumor cases
