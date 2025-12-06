@@ -1,56 +1,23 @@
-📘 Bayesian Hierarchical Logistic Regression for 2-Year Mortality in Pediatric CNS Tumors
-Final Project – Bayesian Statistics
+### 📘 Bayesian Hierarchical Logistic Regression for 2-Year Mortality in Pediatric CNS Tumors
 
 Team: [Team Member Names]
 Date: December 2025
 
-🧠 1. Why Pediatric CNS Tumors Matter
+### 🧠 Why Pediatric CNS Tumors Matter
 
-Pediatric Central Nervous System (CNS) tumors are among the most clinically significant cancers in children, as highlighted across the papers in this project.
+Pediatric Central Nervous System (CNS) tumors are among the most clinically significant cancers in children. 
 
-1. Leading Cause of Pediatric Cancer Death
+Based on the review by **Damodharan & Puccetti (2024)**, three key factors underscore their importance:
 
-From Pediatric CNS Tumor Overview and Emerging Treatment Considerations:
+* **Most common solid tumors in children**
+    > *"CNS tumors are the most common solid neoplasm seen in children."*
+* **Leading cause of cancer-related death**
+    > *"They are the leading cause of death from cancer in this group."*
+* **High incidence (~20% of all childhood cancers)**
+    > *"CNS tumors account for approximately 20% of childhood cancers, second only to leukemia."*
 
-CNS tumors are now the leading cause of cancer-related death in children, surpassing leukemia in many regions.
+These characteristics highlight the **clinical urgency** of studying pediatric CNS tumors and motivate the development of models that better characterize risk factors, treatment effects, and early mortality patterns in this vulnerable population.
 
-They often involve rapid progression, complex tumor biology, and high morbidity.
-
-2. High Tumor Heterogeneity
-
-Subtypes such as medulloblastoma, embryonal tumors, gliomas, and ependymomas vary widely in:
-
-prognosis
-
-genomic drivers
-
-response to therapy
-
-The pediatric brain tumor surgical outcome meta-analysis further shows that clinical outcomes vary dramatically across subtypes, requiring models that can detect subtle patterns.
-
-3. Multi-study Data = High Heterogeneity
-
-The CCDI’s data harmonization paper emphasizes:
-
-large variation in clinical practices,
-
-inconsistent follow-up structures,
-
-demographic differences across institutions.
-
-This directly motivates our use of hierarchical models with study-level random intercepts.
-
-4. Low Event Rate (Rare Mortality Events)
-
-Even among high-risk CNS tumors, 2-year mortality is relatively rare.
-
-Bayesian methods are ideal because they:
-
-handle sparsity,
-
-quantify uncertainty,
-
-avoid overfitting in small-sample subgroups.
 
 🎯 2. Project Overview
 
