@@ -3,7 +3,7 @@
 Team: [Team Member Names]
 Date: December 2025
 
-  ### Why Pediatric CNS Tumors Matter?
+### 1. Why Pediatric CNS Tumors Matter?
 
 Pediatric Central Nervous System (CNS) tumors represent a critical area of oncological research due to their high prevalence and mortality rates in children. This project is motivated by the urgent clinical need to better understand the prognostic factors driving survival in this vulnerable population.
 
@@ -49,23 +49,29 @@ We build a landmark-style survival endpoint:
 0 → survival ≥ 730 days
 censored before 2 years → excluded
 
-Why 2 years?: 2-year OS is a commonly used endpoint in pediatric CNS oncology, and given our sample’s survival distribution (median ≈ 501 days, mean ≈ 872 days), it provides a clinically meaningful separation between early mortality and longer-term survivors.
+REASON:
+The 2-year overall survival (OS) endpoint is a clinically standard benchmark in pediatric CNS oncology. In our cohort, the survival distribution (median ≈ 501 days, mean ≈ 872 days) shows that the 2-year threshold provides a meaningful separation between early mortality and long-term survivors, while avoiding heavy censoring bias.
+
+⸻
+
+Our approach combines:
+	•	Horseshoe priors for sparse feature selection
+	•	Hierarchical structure to model multi-study heterogeneity
+
+⸻
 
 Feature Engineering
+	•	One-hot encoded treatment types
+	•	Age at diagnosis with median imputation + missingness indicator
+	•	Race & sex expanded into atomic indicator variables
+	•	Leakage-free construction using only pre-outcome predictors
 
-One-hot encoding of treatment types and sex
-Multi-hot atomic encoding of race categories
-Age at first diagnosis computed and median-imputed with a missingness indicator
-Survival time constructed from age at diagnosis → age at last contact
-Removal of rows with missing survival time prior to endpoint creation
-Standardization of continuous predictors
-Dropping identifiers (Participant ID, Study ID) prior to modeling
-
+⸻
 
 Final Dataset
-
-~800 (need to update) pediatric CNS tumor cases/patients
-Outcome imbalance ~117:700 (death:survival) (need to update)
+	•	~800 pediatric CNS tumor patients
+	•	Outcome imbalance: ~117 : ~700 (death : survival)
+	•	Censored-before-2-year cases fully excluded from classification
 
 
 ### 4. Bayesian Modeling Methodology
