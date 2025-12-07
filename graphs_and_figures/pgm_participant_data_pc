@@ -1,0 +1,15 @@
+digraph {
+	Race [label=Race shape=ellipse]
+	Age_Group [label=Age_Group shape=ellipse]
+	"Treatment Type" [label="Treatment Type" shape=ellipse]
+	Survival_Group [label=Survival_Group shape=ellipse]
+	Age_Last_Contact_Group [label=Age_Last_Contact_Group shape=ellipse]
+	"Treatment Agent" [label="Treatment Agent" shape=ellipse]
+	"Sex at Birth" [label="Sex at Birth" shape=ellipse]
+	Survival_Group -> Age_Last_Contact_Group
+	Survival_Group -> Race
+	"Treatment Type" -> Age_Group
+	"Treatment Type" -> Survival_Group
+	Age_Group -> Age_Last_Contact_Group
+	"Treatment Agent" -> "Treatment Type"
+}

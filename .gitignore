@@ -10,3 +10,7 @@ __pycache__/
 
 bayesian_personal_environment/path_shortener.sh
 datasets/
+
+bayes_env/
+
+probml-utils/
