@@ -14,3 +14,5 @@ datasets/
 bayes_env/
 
 probml-utils/
+
+notebooks/bayes_net_fixed.ipynb
