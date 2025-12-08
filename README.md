@@ -164,30 +164,38 @@ Adolescents | Photon Beat Radiation = 0.3
 ### 8. Hiearchical Bayesian Logistic Regression Results
 Model Performance
 
-The hierarchical Bayesian logistic regression with Horseshoe priors demonstrated strong predictive performance. By allowing study-specific intercepts and partial pooling, the model successfully captured differences across study populations while avoiding overfitting in smaller groups. When evaluated on the held-out test set, the model achieved an AUC of approximately 0.92, indicating excellent discrimination between patients who survived beyond two years and those who did not.
+The hierarchical Bayesian logistic regression with Horseshoe priors achieved strong predictive performance, with a test AUC of approximately 0.92. This is a substantial improvement over the non-hierarchical logistic model, which reached an AUC of about 0.87. The hierarchical structure allowed the model to account for differences across studies and stabilize parameter estimates, particularly for smaller cohorts. Divergences during sampling were minimal (three after tuning), indicating good overall convergence and a well-behaved posterior.
 
-Compared to the non-hierarchical model, which achieved an AUC around 0.87, the hierarchical version provided a meaningful improvement. This suggests that incorporating study-level structure helps the model better generalize and reduces noise arising from heterogeneous data sources.
+Posterior Coefficients and Key Predictors
 
-Posterior Coefficients
+The **Horseshoe prior** effectively identified a small set of influential predictors while shrinking most coefficients toward zero. The most impactful variables were treatment-related. Specifically:
 
-The posterior estimates showed that only a subset of predictors had substantial influence on mortality risk. The Horseshoe prior effectively shrank uninformative features toward zero while allowing strong predictors to remain prominent. Treatment-related variables dominated the influential coefficients, with some modalities showing large positive associations with two-year mortality. Demographic and race-related variables showed smaller but interpretable effects.
+	•	**Pharmacotherapy** showed one of the strongest positive associations with early mortality. This likely reflects its use in patients with more advanced or complex disease.
 
-The hierarchical structure also stabilized these estimates, allowing the model to use information from large studies while still adjusting for differences in smaller cohorts.
+	•	**Photon Beam Radiation Therapy** also demonstrated a substantial positive effect, consistent with high tumor burden or more aggressive treatment needs.
 
-Convergence Diagnostics
+	•	Additional **radiation-related** or **combined treatment** codes contributed smaller but still noticeable effects.
 
-Sampling diagnostics indicated good overall behavior. Divergences after tuning were minimal (three in total), substantially lower than in earlier non-hierarchical runs. The improvement reflects better geometry in the posterior distribution due to the hierarchical formulation and more appropriate priors. Effective sample sizes were adequate across parameters, and R-hat values were close to 1.0, indicating successful convergence of all chains.
+In contrast, demographic features—including detailed race encodings—showed weaker influences. Most race dummy variables were heavily shrunk toward zero, suggesting that once clinical treatments and study context were accounted for, demographic variables provided limited additional predictive value.
 
-Interpretation
+The hierarchical model produced more stable and interpretable coefficient estimates compared to the non-hierarchical version, especially for studies with small sample sizes.
 
-The results imply that hierarchical modeling provides a clearer and more reliable understanding of which factors drive early mortality. The shrinkage effect improves interpretability by removing noise, and the study-level intercepts account for underlying differences in patient populations. Overall, the hierarchical Bayesian model yields more stable estimates and stronger predictive performance than the simpler logistic regression.
+**Study-Level Effects**
 
-### 8. Conclusion
-This project demonstrated the value of Bayesian hierarchical modeling for survival prediction in a heterogeneous clinical dataset. By incorporating study-level structure and applying Horseshoe priors for feature shrinkage, the final model achieved both strong predictive accuracy and interpretable parameter estimates. The hierarchical framework allowed the model to borrow strength across studies while still accounting for underlying differences in patient populations, resulting in improved stability and higher AUC compared to the non-hierarchical approach.
+Random intercepts varied across Study IDs, reflecting meaningful differences in baseline mortality risk among the four cohorts. Larger studies yielded more stable intercept estimates, while the smallest study groups benefited from partial pooling toward the global mean. This structure reduced overfitting and created a more coherent, calibrated model across the heterogeneous dataset.
 
-The shrinkage behavior of the Horseshoe prior played an important role in clarifying which treatments and demographic variables contributed meaningfully to early mortality risk. At the same time, the model avoided overfitting by suppressing noisy or weakly informative predictors. Together, these elements produced a more robust and clinically interpretable representation of the factors associated with two-year survival.
+**Interpretation**
 
-Overall, the analysis highlights how Bayesian hierarchical methods can provide a principled and effective way to address real-world data challenges such as small subgroup sizes, imbalance across studies, and high-dimensional feature sets. This approach not only yielded better predictive performance but also produced insights that can inform future modeling efforts and guide potential extensions, such as incorporating time-to-event survival models or hierarchical treatment effects.
-### 9. Contact
+Overall, the results show that treatment modality is the dominant driver of early mortality risk, while demographic variables play a secondary role. The hierarchical prior structure significantly improved model robustness by leveraging shared information across studies, reducing sensitivity to sample imbalance, and delivering more reliable inference. These findings underscore the value of hierarchical Bayesian methods in rare-disease datasets, where both high dimensionality and heterogeneous study populations pose major modeling challenges.
+
+### 9. Conclusion
+This project demonstrates that Bayesian hierarchical modeling provides a powerful and reliable framework for predicting 2-year mortality in pediatric CNS tumor patients. By combining a logistic likelihood with study-level random intercepts and Horseshoe priors for feature shrinkage, the model successfully handled the challenges of a heterogeneous, imbalanced, and clinically complex dataset. The hierarchical structure was particularly valuable, enabling smaller study cohorts to borrow strength from larger ones while still allowing meaningful differences across studies to emerge.
+
+A key empirical finding is that **treatment modality plays the dominant role in determining early mortality risk**. Pharmacotherapy and photon beam radiation therapy appeared as consistently strong positive predictors of mortality, likely reflecting their use in more severe or aggressive clinical presentations. Other radiation-related treatments also contributed meaningfully, while demographic variables showed limited predictive influence after accounting for treatment and study effects. The Horseshoe prior effectively suppressed noise by shrinking weak predictors toward zero, improving interpretability without sacrificing flexibility.
+
+The hierarchical model achieved a substantially higher predictive performance (AUC ≈ 0.92) compared to the non-hierarchical version (AUC ≈ 0.87), while also reducing divergences and improving parameter stability. These results highlight how Bayesian hierarchical approaches can overcome common limitations in rare-disease datasets, such as small subgroup sizes and variable study designs.
+
+Overall, this analysis shows that hierarchical Bayesian logistic regression not only enhances predictive accuracy but also yields clinically meaningful insights about treatment-related risk drivers. The framework provides a strong foundation for future extensions, such as time-to-event survival models, hierarchical treatment effects, or more detailed patient-level covariates.
+### 10. Contact
 
 For questions or further exploration, please open an issue in this repository or contact the project team.
