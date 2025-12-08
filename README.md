@@ -73,7 +73,7 @@ Final Dataset
 	•	Outcome imbalance: ~117 : ~700 (death : survival)
 	•	Censored-before-2-year cases fully excluded from classification
 
-### 3. Initial EDA and Bayes Net
+### 4. Initial EDA and Bayes Net
 
 After some data engineering, we analyzed the chi squared contingency for our features and our main target to understand what are the most important features to consider for the final model. For further analysis, we also created two bayesian networks: one including our target variable and one without.
 
@@ -81,6 +81,25 @@ After some data engineering, we analyzed the chi squared contingency for our fea
 Model Type
 
 Bayesian Hierarchical Logistic Regression with Horseshoe Priors
+
+This model combines:
+
+Logistic regression for binary survival outcome
+
+Horseshoe priors for sparse, data-driven feature shrinkage
+
+Hierarchical (multi-level) random intercepts to model differences across studies (Study ID)
+
+This structure allows the model to:
+
+Identify the most influential clinical and demographic predictors
+
+Handle high-dimensional features robustly
+
+Borrow statistical strength across multiple studies
+
+Reduce overfitting in small sub-cohorts
+
 
 Likelihood
 
