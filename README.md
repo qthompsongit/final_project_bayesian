@@ -170,11 +170,11 @@ Posterior Coefficients and Key Predictors
 
 The **Horseshoe prior** effectively identified a small set of influential predictors while shrinking most coefficients toward zero. The most impactful variables were treatment-related. Specifically:
 
-	•	**Pharmacotherapy** showed one of the strongest positive associations with early mortality. This likely reflects its use in patients with more advanced or complex disease.
+•	**Pharmacotherapy** showed one of the strongest positive associations with early mortality. This likely reflects its use in patients with more advanced or complex disease.
 
-	•	**Photon Beam Radiation Therapy** also demonstrated a substantial positive effect, consistent with high tumor burden or more aggressive treatment needs.
+•	**Photon Beam Radiation Therapy** also demonstrated a substantial positive effect, consistent with high tumor burden or more aggressive treatment needs.
 
-	•	Additional **radiation-related** or **combined treatment** codes contributed smaller but still noticeable effects.
+•	Additional **radiation-related** or **combined treatment** codes contributed smaller but still noticeable effects.
 
 In contrast, demographic features—including detailed race encodings—showed weaker influences. Most race dummy variables were heavily shrunk toward zero, suggesting that once clinical treatments and study context were accounted for, demographic variables provided limited additional predictive value.
 
