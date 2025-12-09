@@ -162,6 +162,9 @@ Teenagers | Electron Beam Radiation = 0.8
 Adolescents | Photon Beat Radiation = 0.3
 
 ### 8. Hiearchical Bayesian Logistic Regression Results
+### Hierarchical Logistic Regression – AUC
+![Hierarchical Logistic Regression AUC](graphs_and_figures/Andy Images/Andy Hierarchical Logistic Regression AUC.png)
+
 Model Performance
 
 The hierarchical Bayesian logistic regression with Horseshoe priors achieved strong predictive performance, with a test AUC of approximately 0.92. This is a substantial improvement over the non-hierarchical logistic model, which reached an AUC of about 0.87. The hierarchical structure allowed the model to account for differences across studies and stabilize parameter estimates, particularly for smaller cohorts. Divergences during sampling were minimal (three after tuning), indicating good overall convergence and a well-behaved posterior.
