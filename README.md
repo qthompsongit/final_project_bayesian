@@ -163,7 +163,7 @@ Adolescents | Photon Beat Radiation = 0.3
 
 ### 8. Hiearchical Bayesian Logistic Regression Results
 ### Hierarchical Logistic Regression – AUC
-![Hierarchical Logistic Regression AUC](graphs_and_figures/Andy Images/Andy Hierarchical Logistic Regression AUC.png)
+![Hierarchical Logistic Regression AUC](graphs_and_figures/Andy%20Images/Andy%20Hierarchical%20Logistic%20Regression%20AUC.png)
 
 Model Performance
 
