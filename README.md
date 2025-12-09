@@ -175,6 +175,9 @@ The hierarchical Bayesian logistic regression with Horseshoe priors achieved str
 
 ### Posterior Coefficients and Key Predictors
 
+![Andy Horseshoe Logistic Coefficients](https://raw.githubusercontent.com/qthompsongit/final_project_bayesian/main/graphs_and_figures/Andy%20Images/Andy%20Horseshoe%20Logistic%20Coefficients.png)
+![Andy Hierarchical Horseshoe Logistic Coefficients](https://raw.githubusercontent.com/qthompsongit/final_project_bayesian/main/graphs_and_figures/Andy%20Images/Andy%20Hierarchical%20Horseshoe%20Logistic%20Coefficients.png)
+
 The **Horseshoe prior** effectively identified a small set of influential predictors while shrinking most coefficients toward zero. The most impactful variables were treatment-related. Specifically:
 
 •	**Pharmacotherapy** showed one of the strongest positive associations with early mortality. This likely reflects its use in patients with more advanced or complex disease.
