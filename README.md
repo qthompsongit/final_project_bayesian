@@ -155,7 +155,7 @@ Our bayesian network models revealed two key important factors that played a key
 
 Across our bayesian networks, we note a difference in survival times for different races, where shorter survival times attain conditional probabilities for non-white participants less than 0.15, while longer survival times survival times have conditional probabilities for white participants in upwards of 0.5. This may be due to the class imbalance in our data, as the majority of participants studied where white. 
 
-
+![alt-text](https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/4_age_at_diagnosis_distribution.png "Test Image")
 
 Medium survival times have high conditional probabilites with treatment types like cellular transplants (0.75), while long survival times have high conditional probabilites for long survival times (0.11). Both of these results make sense as these are both prove, common, and effective treatments for various forms of CNS. We also noted some interesting applications of treatments across age ranges as listed below.
 
