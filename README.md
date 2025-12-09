@@ -1,6 +1,6 @@
 ### Bayesian Hierarchical Logistic Regression for 2-Year Mortality in Pediatric CNS Tumors
 
-Team: [Team Member Names]
+Team: [QAY Cohort, Inyoung Yang, Muqi Fan, and Quinn Thompson]
 Date: December 2025
 
 ### 1. Why Pediatric CNS Tumors Matter?
