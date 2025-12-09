@@ -70,7 +70,7 @@ Feature Engineering
 
 Final Dataset
 	•	~800 pediatric CNS tumor patients
-	•	Outcome imbalance: ~117 : ~700 (death : survival)
+	•	Outcome : ~117 : ~700 (death : survival)
 	•	Censored-before-2-year cases fully excluded from classification
 
 ### 4. Initial EDA and Bayes Net
