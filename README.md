@@ -1,7 +1,6 @@
 ### Bayesian Hierarchical Logistic Regression for 2-Year Mortality in Pediatric CNS Tumors
 
 Team: [QAY Cohort, Inyoung Yang, Muqi Fan, and Quinn Thompson]
-Date: December 2025
 
 ### 1. Why Pediatric CNS Tumors Matter?
 
@@ -70,7 +69,7 @@ Feature Engineering
 
 Final Dataset
 	•	~800 pediatric CNS tumor patients
-	•	Outcome imbalance: ~117 : ~700 (death : survival)
+	•	Outcome : ~117 : ~700 (death : survival)
 	•	Censored-before-2-year cases fully excluded from classification
 
 ### 4. Initial EDA and Bayes Net
@@ -142,7 +141,7 @@ Overall, the likelihood expresses the idea that each patient’s observed outcom
 
 ### 7. Bayesian Network Results
 
-We observe our landmark target benchmark at 11.1% of the recorded cases in our data. The most common combination of demographic features from participants in our model were white, male participants who had received a surgical procedure treatment. Average survival time in days for our participants was 508 days. The average age of diagnosis and last contacted days are relatively similar at 3194 and 3677 respectively. 
+We observe our landmark target benchmark at 11.1% of the recorded cases in our data. The most common combination of demographic features from participants in our model were white, male participants who had received a surgical procedure treatment. Average survival time in days for our participants in the final dataset was 508 days. The average age of diagnosis and last contacted days are relatively similar at 3194 and 3677 respectively. 
 
 
 
@@ -170,11 +169,21 @@ Teenagers | Electron Beam Radiation = 0.8
 Adolescents | Photon Beat Radiation = 0.3
 
 ### 8. Hiearchical Bayesian Logistic Regression Results
-Model Performance
+
+### Bayesian Logistic Regression – AUC
+![Logistic Regression AUC](https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/Andy%20Images/Andy%20Hiearchical%20Logistic%20Regression%20AUC.png)
+
+### Hierarchical Bayesian Logistic Regression – AUC
+![Hierarchical Logistic Regression AUC](https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/Andy%20Images/Andy%20Hiearchical%20Logistic%20Regression%20AUC.png)
+
+### Model Performance
 
 The hierarchical Bayesian logistic regression with Horseshoe priors achieved strong predictive performance, with a test AUC of approximately 0.92. This is a substantial improvement over the non-hierarchical logistic model, which reached an AUC of about 0.87. The hierarchical structure allowed the model to account for differences across studies and stabilize parameter estimates, particularly for smaller cohorts. Divergences during sampling were minimal (three after tuning), indicating good overall convergence and a well-behaved posterior.
 
-Posterior Coefficients and Key Predictors
+### Posterior Coefficients and Key Predictors
+
+![Andy Horseshoe Logistic Coefficients](https://raw.githubusercontent.com/qthompsongit/final_project_bayesian/main/graphs_and_figures/Andy%20Images/Andy%20Horseshoe%20Logistic%20Coefficients.png)
+![Andy Hierarchical Horseshoe Logistic Coefficients](https://raw.githubusercontent.com/qthompsongit/final_project_bayesian/main/graphs_and_figures/Andy%20Images/Andy%20Hierarchical%20Horseshoe%20Logistic%20Coefficients.png)
 
 The **Horseshoe prior** effectively identified a small set of influential predictors while shrinking most coefficients toward zero. The most impactful variables were treatment-related. Specifically:
 
