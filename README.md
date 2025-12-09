@@ -70,7 +70,7 @@ Feature Engineering
 
 Final Dataset
 	•	~800 pediatric CNS tumor patients
-	•	Outcome imbalance: ~117 : ~700 (death : survival)
+	•	Outcome : ~117 : ~700 (death : survival)
 	•	Censored-before-2-year cases fully excluded from classification
 
 ### 4. Initial EDA and Bayes Net
@@ -142,7 +142,7 @@ Overall, the likelihood expresses the idea that each patient’s observed outcom
 
 ### 7. Bayesian Network Results
 
-We observe our landmark target benchmark at 11.1% of the recorded cases in our data. The most common combination of demographic features from participants in our model were white, male participants who had received a surgical procedure treatment. Average survival time in days for our participants was 508 days. The average age of diagnosis and last contacted days are relatively similar at 3194 and 3677 respectively. 
+We observe our landmark target benchmark at 11.1% of the recorded cases in our data. The most common combination of demographic features from participants in our model were white, male participants who had received a surgical procedure treatment. Average survival time in days for our participants in the final dataset was 508 days. The average age of diagnosis and last contacted days are relatively similar at 3194 and 3677 respectively. 
 
 For our selection of features (treatment type, treatment agent, race, sex at birth, age group, survival group, and age last contact group), we verified their association with our target variable by evaluating their chi squared contingency. Notably, all of our variables has some significant association with our target variable, with the most pronounced significance outside of our survival grouping variable being the treatment type for a patient.
 
