@@ -162,19 +162,18 @@ Teenagers | Electron Beam Radiation = 0.8
 Adolescents | Photon Beat Radiation = 0.3
 
 ### 8. Hiearchical Bayesian Logistic Regression Results
-### Logistic Regression – AUC
-![Logistic Regression AUC]
-(https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/Andy%20Images/Andy%20Logistic%20Regression%20AUC.png)
 
-### Hierarchical Logistic Regression – AUC
-![Hierarchical Logistic Regression AUC]
-(https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/Andy%20Images/Andy%20Hiearchical%20Logistic%20Regression%20AUC.png)
+### Bayesian Logistic Regression – AUC
+![Logistic Regression AUC](https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/Andy%20Images/Andy%20Hiearchical%20Logistic%20Regression%20AUC.png)
 
-Model Performance
+### Hierarchical Bayesian Logistic Regression – AUC
+![Hierarchical Logistic Regression AUC](https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/Andy%20Images/Andy%20Hiearchical%20Logistic%20Regression%20AUC.png)
+
+### Model Performance
 
 The hierarchical Bayesian logistic regression with Horseshoe priors achieved strong predictive performance, with a test AUC of approximately 0.92. This is a substantial improvement over the non-hierarchical logistic model, which reached an AUC of about 0.87. The hierarchical structure allowed the model to account for differences across studies and stabilize parameter estimates, particularly for smaller cohorts. Divergences during sampling were minimal (three after tuning), indicating good overall convergence and a well-behaved posterior.
 
-Posterior Coefficients and Key Predictors
+### Posterior Coefficients and Key Predictors
 
 The **Horseshoe prior** effectively identified a small set of influential predictors while shrinking most coefficients toward zero. The most impactful variables were treatment-related. Specifically:
 
