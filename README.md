@@ -147,7 +147,7 @@ We observe our landmark target benchmark at 11.1% of the recorded cases in our d
 
 ![alt-text](https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/4_age_at_diagnosis_distribution.png "Our Bayes Net Without the Target Variable")
 
-![alt-text](https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/4_age_at_last_contact_distribution.png "Our Bayes Net Without the Target Variable")
+![alt-text](https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/4_age_at_last_contacted_distribution.png "Our Bayes Net Without the Target Variable")
 
 
 For our selection of features (treatment type, treatment agent, race, sex at birth, age group, survival group, and age last contact group), we verified their association with our target variable by evaluating their chi squared contingency. Notably, all of our variables has some significant association with our target variable, with the most pronounced significance outside of our survival grouping variable being the treatment type for a patient.
