@@ -72,7 +72,7 @@ Final Dataset
 	•	Outcome : ~117 : ~700 (death : survival)
 	•	Censored-before-2-year cases fully excluded from classification
 
-### 4. Initial EDA and Bayes Net
+### 4. Initial Exploratory Data Analysis and Bayes Net
 
 After some data engineering, we analyzed the chi squared contingency for our features and our main target to understand what are the most important features to consider for the final model. For further analysis, we also created two bayesian networks: one including our target variable and one without.
 
@@ -139,7 +139,7 @@ Overall, the likelihood expresses the idea that each patient’s observed outcom
     trace_hier = pm.sample(draws=2000, tune=3000, chains=4, random_seed=42)
 **
 
-### 7. Bayesian Network Results
+### 7. Exploratory Data Analysis and Bayesian Network Results
 
 We observe our landmark target benchmark at 11.1% of the recorded cases in our data. The most common combination of demographic features from participants in our model were white, male participants who had received a surgical procedure treatment. Average survival time in days for our participants in the final dataset was 508 days. The average age of diagnosis and last contacted days are relatively similar at 3194 and 3677 respectively. 
 
