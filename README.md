@@ -141,7 +141,7 @@ Overall, the likelihood expresses the idea that each patient’s observed outcom
 
 ### 7. Exploratory Data Analysis and Bayesian Network Results
 
-We observe our landmark target benchmark at 11.1% of the recorded cases in our data. The most common combination of demographic features from participants in our model were white, male participants who had received a surgical procedure treatment. Average survival time in days for our participants in the final dataset was 508 days. The average age of diagnosis and last contacted days are relatively similar at 3194 and 3677 respectively. 
+We observe our landmark target benchmark at 11.1% of the recorded cases in our data. The most common combination of demographic features among participants in our model was white, male participants who had received surgical treatment. The average survival time in days for our participants in the final dataset was 508 days. The average age at diagnosis and the last-contact date are relatively similar at 3194 and 3677, respectively. 
 
 ### Distribution of Survival Time
 ![alt-text](https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/4_survival_time_distribution.png "Survival Time Distribution")
@@ -152,9 +152,9 @@ We observe our landmark target benchmark at 11.1% of the recorded cases in our d
 ### Distribution of the Age of Participants at the Last Contacted Date
 ![alt-text](https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/4_age_at_last_contacted_distribution.png "Age at Last Contacted Date Distribution")
 
-For our selection of features (treatment type, treatment agent, race, sex at birth, age group, survival group, and age last contact group), we verified their association with our target variable by evaluating their chi squared contingency. Notably, all of our variables has some significant association with our target variable, with the most pronounced significance outside of our survival grouping variable being the treatment type for a patient.
+For our selection of features (treatment type, treatment agent, race, sex at birth, age group, survival group, and age last contact group), we verified their association with our target variable by evaluating the chi-squared test of independence. Notably, all of our variables has some significant association with our target variable, with the most pronounced significance outside of our survival grouping variable being the treatment type for a patient.
 
-Our bayesian network models revealed two key important factors that played a key role in the construction of our final model. Both of our models attain BIC scores of -19410.74 and -20139.21, with models trained with the parameter constrained methodology working the best. In both models, sex at birth was not found to have any significant conditional association with any of our variables. While treatment agent attains a conditional association with our target variable through treatment type when our target is introduced to the bayesian network, it loses that association with the target variable.
+Both of our models attain BIC scores of -19410.74 and -20139.21, with the parameter-constrained methodology yielding the best results. In both models, sex at birth was not significantly associated with any of our variables. While the treatment agent acquires a conditional association with our target variable through treatment type when the target is introduced into the Bayesian network, it subsequently loses that association.
 
 ### Bayesian Network Without Our Target Variable
 ![alt-text](https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/4_best_bayesnet_no_target.png "Our Bayes Net Without the Target Variable")
@@ -162,9 +162,9 @@ Our bayesian network models revealed two key important factors that played a key
 ### Bayesian Network With Our Target Variable
 ![alt-text](https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/4_best_bayesnet_with_target.png "Our Bayes Net With the Target Variable")
 
-Across our bayesian networks, we note a difference in survival times for different races, where shorter survival times attain conditional probabilities for non-white participants less than 0.15, while longer survival times survival times have conditional probabilities for white participants in upwards of 0.5. This may be due to the class imbalance in our data, as the majority of participants studied where white. 
+Across our Bayesian networks, we observe differences in survival times by race: shorter survival times have conditional probabilities for non-white participants below 0.15, while longer survival times have conditional probabilities for white participants above 0.5. This may be due to the class imbalance in our data, as the majority of participants studied where white. 
 
-Medium survival times have high conditional probabilites with treatment types like cellular transplants (0.75), while long survival times have high conditional probabilites with immunotherapy treatments (0.11). Both of these results make sense as these are both prove, common, and effective treatments for various forms of CNS. We also noted some interesting applications of treatments across age ranges as listed below.
+Medium survival times have higher conditional probabilities with treatments such as cellular transplants (0.75), while long survival times have higher conditional probabilities with immunotherapy (0.11). Both of these results make sense as these are all proven, common, and effective treatments for various forms of CNS. We also noted some interesting applications of treatments across age ranges as listed below.
 
 Child | Radiation = 0.88
 
@@ -172,7 +172,7 @@ Toddlers | Cellular Therapy = 0.71
 
 Teenagers | Electron Beam Radiation = 0.8
 
-Adolescents | Photon Beat Radiation = 0.3
+Adolescents | Photon Beam Radiation = 0.3
 
 ### 8. Hiearchical Bayesian Logistic Regression Results
 
