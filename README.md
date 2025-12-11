@@ -164,7 +164,7 @@ Both of our models attain BIC scores of -19410.74 and -20139.21, with the parame
 
 Across our Bayesian networks, we observe differences in survival times by race: shorter survival times have conditional probabilities for non-white participants below 0.15, while longer survival times have conditional probabilities for white participants above 0.5. This may be due to the class imbalance in our data, as the majority of participants studied where white. 
 
-Medium survival times have higher conditional probabilities with treatments such as cellular transplants (0.75), while long survival times have higher conditional probabilities with immunotherapy (0.11). Both of these results make sense as these are all proven, common, and effective treatments for various forms of CNS. We also noted some interesting applications of treatments across age ranges as listed below.
+Medium survival times have higher conditional probabilities with treatments such as cellular transplants (0.75), while long survival times have higher conditional probabilities with immunotherapy (0.11). Both of these results make sense as these are all proven, common, and effective treatments for various forms of CNS tumors. We also noted some interesting applications of treatments across age ranges as listed below.
 
 Child | Radiation = 0.88
 
