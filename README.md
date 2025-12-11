@@ -141,7 +141,7 @@ Overall, the likelihood expresses the idea that each patient’s observed outcom
 
 ### 7. Exploratory Data Analysis and Bayesian Network Results
 
-We observe our landmark target benchmark at 11.1% of the recorded cases in our data. The most common combination of demographic features among participants in our model was white, male participants who had received surgical treatment. The average survival time in days for our participants in the final dataset was 508 days. The average age at diagnosis and the last-contact date are relatively similar at 3194 and 3677, respectively. 
+We observe our landmark target benchmark at 11.1% of the recorded cases in our data. The most common combination of demographic features among participants in our model was white, male participants who had received surgical treatment. The average survival time in days for our participants in the final dataset was 508 days. The average age at diagnosis and the age at last-contact date are relatively similar at 3194 and 3677, respectively. 
 
 ### Distribution of Survival Time
 ![alt-text](https://github.com/qthompsongit/final_project_bayesian/blob/main/graphs_and_figures/4_survival_time_distribution.png "Survival Time Distribution")
